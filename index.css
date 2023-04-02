@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;;
+    overflow:hidden;
+}
+
+.back {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top right, #010103, #02020a, #030310, #040414, #0d0414, #100414, #140414);
+    opacity: 0.7;
+}
+
+.stars {
+    background: #000 url(./images/stars.png) repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: -30;
+}
+
+.twinkling{
+	width: 10000px;
+    height: 100%;
+    background: transparent url(./images/twinkling.png) repeat;
+    background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -28;
+    animation: move-background 70s linear infinite;
+}
+
+@keyframes move-background {
+    from {
+          -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+      to { 
+          -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+.shower {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    transform: rotate(-45deg);
+}
+.meteor {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background:radial-gradient(#d4d4d4, #000);
+    animation: shoot 1s linear infinite;
+    opacity: 0.3;
+}
+.meteor::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 1.5px;
+    left: 3px;
+    width:50px;
+    height: 1px;
+    background: #d4d4d4;
+    animation: burn-tail 1s linear infinite;
+    opacity: 0.3;
+}
+
+@keyframes shoot {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-1000px, 0, 0);
+    }
+}
+@keyframes burn-tail {
+    from {
+        width: 70px
+    }
+    to {
+        width: 0;
+    }
+}
+
+.meteor:nth-child(1) {
+    top: 10px;
+    animation-delay: 0.8s;
+}
+.meteor:nth-child(1)::after {
+    animation-delay: 0.8s;
+}
+.meteor:nth-child(2) {
+    top: 50px;
+    animation-delay: 0.2s;
+}
+.meteor:nth-child(2)::after {
+    animation-delay: 0.2s;
+}
+.meteor:nth-child(3) {
+    top: 70px;
+    animation-delay: 0.1s;
+}
+.meteor:nth-child(3)::after {
+    animation-delay: 0.1s;
+}
+.meteor:nth-child(4) {
+    top: 100px;
+    animation-delay: 0.5s;
+}
+.meteor:nth-child(4)::after {
+    animation-delay: 0.5s;
+}
+.meteor:nth-child(5) {
+    top: 160px;
+    animation-delay: 0.9s;
+}
+.meteor:nth-child(5)::after {
+    animation-delay: 0.9s;
+}
+.meteor:nth-child(6) {
+    top: 200px;
+    animation-delay: 0.3s;
+}
+.meteor:nth-child(6)::after {
+    animation-delay: 0.3s;
+}
+.meteor:nth-child(7) {
+    top: 250px;
+    animation-delay: 0.6s;
+}
+.meteor:nth-child(7)::after {
+    animation-delay: 0.6s;
+}
+.meteor:nth-child(8) {
+    top: 290px;
+    animation-delay: 0.1s;
+}
+.meteor:nth-child(8)::after {
+    animation-delay: 0.1s;
+}
+.meteor:nth-child(9) {
+    top: 340px;
+    animation-delay: 0.7s;
+}
+.meteor:nth-child(9)::after {
+    animation-delay: 0.7s;
+}
+.meteor:nth-child(10) {
+    top: 400px;
+    animation-delay: 0.4s;
+}
+.meteor:nth-child(10)::after {
+    animation-delay: 0.4s;
+}
+
+.horizon {
+    position: absolute;
+    background: #000;
+    width: 100%;
+    height: 10%;
+    bottom: 20%;
+}
+.hill1 {
+    position: absolute;
+    background: #000;
+    width: 10%;
+    height: 100%;
+    bottom: 50%;
+    transform: rotate(30deg);
+}
+.hill2{
+    position: absolute;
+    background: #000;
+    width: 10%;
+    height: 150%;
+    left: 7%;
+    bottom: 45%;
+    transform: rotate(-45deg);
+}
+.hill3{
+    position: absolute;
+    background: #000;
+    width: 10%;
+    height: 150%;
+    left: 17%;
+    bottom: 45%;
+    transform: rotate(-30deg);
+}
+.hill4{
+    position: absolute;
+    background: #000;
+    width: 15%;
+    height: 150%;
+    left: 20%;
+    bottom: 150%;
+    transform: rotate(-60deg);
+}
+.fill1 {
+    position: absolute;
+    background: #000;
+    width: 10%;
+    height: 100%;
+    left: 27%;
+    bottom: 100%;
+}
+.hill5{
+    position: absolute;
+    background: #000;
+    width: 15%;
+    height: 200%;
+    left: 27%;
+    bottom: 150%;
+    transform: rotate(45deg);
+}
+.hill6{
+    position: absolute;
+    background: #000;
+    width: 15%;
+    height: 200%;
+    left: 35%;
+    bottom: 60%;
+    transform: rotate(25deg);
+}
+.hill7{
+    position: absolute;
+    background: #000;
+    width: 10%;
+    height: 100%;
+    left: 40%;
+    bottom: 150%;
+    transform: rotate(45deg);
+}
+.hill8{
+    position: absolute;
+    background: #000;
+    width: 15%;
+    height: 200%;
+    left: 47%;
+    bottom: 100%;
+    transform: rotate(-45deg);
+}
+.hill9{
+    position: absolute;
+    background: #000;
+    width: 13%;
+    height: 200%;
+    left: 60%;
+    bottom: 60%;
+    transform: rotate(-45deg);
+}
+.fill2 {
+    position: absolute;
+    background: #000;
+    width: 10%;
+    height: 100%;
+    left: 53%;
+    bottom: 60%;
+}
+.hill10 {
+    position: absolute;
+    background: #000;
+    width: 20%;
+    height: 200%;
+    left: 70%;
+    bottom: 120%;
+    transform: rotate(-60deg);
+}
+.hill11 {
+    position: absolute;
+    background: #000;
+    width: 20%;
+    height: 200%;
+    left: 75%;
+    bottom: 110%;
+    transform: rotate(-45deg);
+}
+.hill12 {
+    position: absolute;
+    background: #000;
+    width: 15%;
+    height: 150%;
+    left: 90%;
+    bottom: 110%;
+    transform: rotate(30deg);
+}
+.fill3 {
+    position: absolute;
+    background: #000;
+    width: 12%;
+    height: 100%;
+    left: 86%;
+    bottom: 75%;
+}
+.footer{
+    position: absolute;
+    background: #000;
+    width: 100%;
+    height: 20%;
+    bottom: 0;
+}
